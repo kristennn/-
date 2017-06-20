@@ -1,0 +1,7 @@
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="text-center">申请职位</h2>
+  <%= simple_form_for [@job, @resume] do |f| %>
+    <%= f.input :content, input_html: {class: "form-control"} %>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
