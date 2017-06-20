@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :resumes
 
-  def is_admin?
-    current_user.email == "kristenzheng941126@gmail.com"
+  def admin?
+    is_admin?
   end
 
 end
