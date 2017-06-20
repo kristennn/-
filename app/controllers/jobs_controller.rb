@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all.where(:is_admin => false).order("created_at DESC")
+    @jobs = Job.all
   end
 
   def show

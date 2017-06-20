@@ -18,11 +18,7 @@
           <td><%= job.description %></td>
           <td><%= job.created_at %></td>
           <td>
-            <% if job.is_hidden %>
-              <%= link_to("public", public_admin_job_path(job), method: :post, class: "btn btn-xs btn-success") %>
-            <% else %>
-              <%= link_to("hide", hide_admin_job_path(job), method: :post, class: "btn btn-xs btn-warning") %>
-            <% end %>
+          <%= render_job_status(job) %>
           </td>
           <td>
             <%= link_to("Edit", edit_admin_job_path(job), class: "btn btn-sm btn-default") %>
