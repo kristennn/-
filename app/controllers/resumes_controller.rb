@@ -14,7 +14,7 @@ before_action :authenticate_user!
 
     if @resume.save
       flash[:notice] = "投递成功"
-      redirect_to jobs_path
+      redirect_to job_path(@job)
     else
       render :new
     end
@@ -23,7 +23,7 @@ before_action :authenticate_user!
   private
 
   def resume_params
-    params.require(:resume).permit(:content)
+    params.require(:resume).permit(:content, :attachment)
   end
 
 end

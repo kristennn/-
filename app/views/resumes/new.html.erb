@@ -2,6 +2,7 @@
   <h2 class="text-center">申请职位</h2>
   <%= simple_form_for [@job, @resume] do |f| %>
     <%= f.input :content, input_html: {class: "form-control"} %>
+    <%= f.input :attachment %>
     <%= f.submit "Submit" %>
   <% end %>
 </div>
