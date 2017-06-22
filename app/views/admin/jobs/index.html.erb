@@ -8,6 +8,7 @@
         <td>职位描述</td>
         <td>上传时间</td>
         <td>状态</td>
+        <td>简历</td>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +26,7 @@
             <%= link_to("hide", hide_admin_job_path(job), method: :post, class: "btn btn-xs btn-default") %>
           <% end %>
           </td>
+          <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
           <td>
             <%= link_to("Edit", edit_admin_job_path(job), class: "btn btn-sm btn-default") %>
             <%= link_to("Delete", admin_job_path(job), class: "btn btn-sm btn-default", method: :delete, data: { confirm: "Are you sure?"}) %>
